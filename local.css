@@ -1,0 +1,536 @@
+/* ikiwiki local style sheet */
+
+/* Three fonts from google fonts. To protect the users IP adress,
+ * the fonts have been added locally. The original urls are:
+ *  src: url(https://fonts.gstatic.com/s/molengo/v14/I_uuMpWeuBzZNBtQXb1akxCv.woff2) format('woff2');
+ *  src: url(https://fonts.gstatic.com/s/molengo/v14/I_uuMpWeuBzZNBtQXbNakw.woff2) format('woff2');
+ *  src: url(http://fonts.gstatic.com/s/crimsontext/v13/wlp2gwHKFkZgtmSR3NB0oRJfbwhT.woff2) format('woff2');
+ */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Molengo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/I_uuMpWeuBzZNBtQXb1akxCv.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Molengo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/I_uuMpWeuBzZNBtQXbNakw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/wlp2gwHKFkZgtmSR3NB0oRJfbwhT.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Add local styling here, instead of modifying style.css. */
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    font-family: 'Molengo', Helvetica, sans-serif;
+
+    font-style: normal;
+    font-size: 100%;
+    color: #202020;
+/*    color: #99cc00;*/
+/*    color: #ff9900;*/
+}
+
+#all {
+    position: relative;
+    max-width: 850px;
+    min-width: 600px;
+    margin: 0 auto;
+
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+
+
+/* page header ****************************************************************/
+div.pageheader {
+    margin: 0;
+    padding: 0;
+
+/*    background: #202020;*/
+/*    color: #ffffff;*/
+
+    font-size: 100%;
+}
+
+div.pageheader a {
+    color: #ffffff;
+
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div.pageheader a: hover {
+    text-decoration: underline;
+}
+
+div.header {
+    margin: 0;
+    padding: 0;
+
+    font-size: 100%;
+}
+
+
+
+/* ppreview page header ****************************************************************/
+div.preview {
+    position: fixed;
+    margin: 0;
+    padding: .5em;
+    z-index: 100;
+    left: 0;
+    top: 20%;
+    height: 5em;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-top-right-radius: 10px;
+    -moz-border-bottom-right-radius: 10px;
+
+    background: red;;
+}
+
+div.previewonhover {
+    display: none;
+}
+
+div.preview:hover > div.previewonhover, div.preview > div.previewonhover:hover {
+    display: table-cell;
+    width: 6em;
+    height: 5em;
+    color: white;
+    vertical-align: middle;
+}
+
+div.previewonhover a {
+    color: white;;
+    text-decoration: underline;
+}
+
+div.previewdummy {
+    display: table-cell;
+    width: 0em;
+    height: 5em;
+    vertical-align: middle;
+}
+
+div.previewflag {
+    display: table-cell;
+    vertical-align: middle;
+    max-height:1em;
+
+    transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -webkit-transform:rotate(270deg);
+    -o-transform:rotate(270deg);
+    -ms-transform:rotate(270deg);
+
+    color: white;;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+
+/* footer *********************************************************************/
+#footer
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#pageinfo
+{
+    margin: 0;
+    padding: 10px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-right-radius: 10px;
+
+/*    background: #99adc2;*/
+/*    color: #ffffff;*/
+    background: #ccd6e0;
+    color: #202020;
+}
+
+
+
+/* breadcrumb navigation ******************************************************/
+ul.breadcrumb {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    overflow: hidden;
+
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-bottom-right-radius: 10px;
+    background: #99adc2;
+    color: #ffffff;
+}
+
+ul.breadcrumb li {
+    float: left;
+    padding: 10px 0 10px 20px;
+
+    background: #99adc2;
+}
+
+ul.breadcrumb li:first-child
+{
+    padding-left: 10px;
+}
+
+ul.breadcrumb li a {
+    position: relative;
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    left: 100%;
+    z-index: 2;
+
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 15px solid #99adc2;
+}
+
+
+ul.breadcrumb li a:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: 2px;
+    left: 100%;
+    z-index: 1;
+
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 15px solid #ffffff;
+}
+
+ul.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+ul.breadcrumb li:nth-last-child(2) { background: #6685a3; }
+ul.breadcrumb li:nth-last-child(2) a:after { border-left-color: #6685a3; }
+ul.breadcrumb li:nth-last-child(3) { background: #335c85; }
+ul.breadcrumb li:nth-last-child(3) a:after { border-left-color: #335c85; }
+ul.breadcrumb li:nth-last-child(4) { background: #003366; }
+ul.breadcrumb li:nth-last-child(4) a:after { border-left-color: #003366; }
+
+ul.breadcrumb li:first-child
+{
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+/* the toc list ***************************************************************/
+/*
+#content > *
+{
+    margin-right: 180px;
+}
+
+#content div.toc {
+    width:140px;
+    float:right;
+
+    padding: 10px;
+    margin: 10px;
+
+    font-size: 100%;
+    background: #808080;
+    text-color: #ffffff;
+}
+
+#content div.toc a {
+    text-color: #ffffff;
+}
+*/
+
+/*
+#content div.toc {
+    margin: 0 -10px;
+    padding: 10px;
+
+    background-color: #202020;
+    color: #ffffff;
+
+    font-size: 100%;
+}
+#content div.toc a {
+    text-color: #ffffff;
+}
+*/
+
+
+#content div.toc {
+    margin: 0 -10px;
+    padding: 10px;
+
+/*    border: 1px solid #202020;*/
+    border: 0;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #99adc2;
+
+    font-size: 100%;
+}
+
+#content div.toc ol {
+    margin: 0;
+    padding: 0;
+}
+
+#content div.toc li {
+    margin: 0;
+    padding: 0 10px 0 0;
+    list-style-type: none;
+    display: inline-block;
+}
+
+#content div.toc li > ol {
+    display: none;
+}
+
+#content div.toc li:hover > ol, #content div.toc li > ol:hover {
+    margin: 0;
+    padding: 5px;
+
+    position: absolute;
+    display: block;
+    border: 0;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #202020;
+    background-color: #6685a3;
+}
+
+#content div.toc li li {
+    padding: 5px;
+
+    list-style-type: none;
+    display: block;
+}
+
+#content div.toc li a {
+    color: #ffffff;
+/*    background-color: #ffffff;*/
+}
+
+#content div.toc li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/*#content div.toc li li a {*/
+/*    color: #ffffff;*/
+/*    background-color: #ffffff;*/
+/*}*/
+
+
+#content div.toc a {
+    text-decoration: none;
+}
+
+
+
+/* the content ****************************************************************/
+#content {
+    margin: 0;
+    padding: 0 10px 130px 10px;
+}
+
+/* Text formating */
+#content h1,h2,h3,h4,h5,h6 {
+    font-family: 'Crimson Text', Helvetica, sans-serif;
+    font-weight: normal;
+    color: #cc0000;
+}
+
+#content h2 {
+    color: #cc0000;
+    border-bottom: dotted #202020 1px;
+}
+
+#content h1 {
+    margin: 0 -10px;
+    padding: 10px;
+
+    background-color: #ffffff;
+    color: #202020;
+
+    font-size: 300%;
+}
+
+#content table {
+    border-collapse: collapse;
+}
+
+#content td {
+    border: 1px solid #202020;
+    color: #202020;
+    padding: 10px;
+}
+
+hr {
+    height: 0;
+    border: 0;
+    border-bottom: dotted #202020 1px;
+}
+
+#content a {
+/*    color: #202020;*/
+/*    font-weight: bold;*/
+    color: #335c85;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+#content a:hover {
+    color: #ff9900;
+/*    font-weight: bold;*/
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+#content a[href^="http://"]  {
+    background: url(img/external_link.png) center right no-repeat;
+    padding-right: 13px;
+}
+
+#content a[href^="https://"]  {
+    background: url(img/external_link.png) center right no-repeat;
+    padding-right: 13px;
+}
+
+#content a[href^="mailto:"]  {
+    background: url(img/mail_link.png) center right no-repeat;
+    padding-right: 13px;
+}
+
+/* Images */
+#content img
+{
+    margin: 0;
+    padding: 5px;
+    float: right;
+
+    border: none;
+}
+
+#content h1,h2
+{
+    clear: both;
+}
+
+#content strong
+{
+    color: #cc0000;
+    font-weight: bold;
+}
+
+#content strong a
+{
+    color: #cc0000;
+    font-weight: bold;
+}
+
+#content strong a:hover {
+    color: #ff9900;
+    font-weight: bold;
+}
+
+pre {
+    background: #C5E0FA;
+    border: 1px solid black;
+    padding: 1em;
+}
+
+div.bibtex dt {
+    float:left;
+}
+
+#content .noborder tr td {
+  border-style:none;
+}
+
+#content table.centertable {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content .centertable tr td {
+  text-align: center;
+}
+
+#content .centertable tr td img {
+  display: inline;
+  float: none;
+}
+
+#content .logo {
+  display: inline;
+  float: none;
+  width:22%;
+}
+
+#content div.logo {
+  display: inline;
+  float: none;
+  width:22%;
+}

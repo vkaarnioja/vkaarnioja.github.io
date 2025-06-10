@@ -1,0 +1,79 @@
+/* styles.css */
+
+/* Styling for the top bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Add some height to the top bar to accommodate multiple lines of text */
+.top-bar p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Styling for the navigation menu */
+nav {
+  position: fixed;
+  top: 130px; /* Adjust this value to leave space for the top bar */
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background-color: #00000;
+  padding: 20px;
+  z-index: 0;
+}
+
+/* Styling for the navigation menu links */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+nav ul li a:hover {
+  color: #666;
+}
+
+/* Adding padding to the main content area */
+.main-content {
+  margin-left: 130px;
+  margin-top: 100px; /* Adjust this value to create space for the top bar */
+  padding: 20px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 767px) {
+  .top-bar {
+    /* Adjust the height and line-height for smaller screens */
+    height: 120px;
+    line-height: 30px;
+  }
+
+  nav {
+    /* Reduce the width and adjust the top position for smaller screens */
+    width: 100%;
+    top: 120px;
+  }
+
+  /* Adjust the margin-top for smaller screens */
+  .main-content {
+    margin-top: 120px;
+  }
+}

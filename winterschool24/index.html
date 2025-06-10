@@ -1,0 +1,157 @@
+<style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+        border-collapse:collapse;
+        border: 1px solid black;
+        padding-top:2px;
+        padding-bottom:2px;
+    }
+    </style>
+    
+
+<head>
+
+    <title>Quasi-Monte Carlo methods for PDE uncertainty quantification</title>
+    
+    
+
+    
+
+    
+    
+    
+
+   
+</head>
+
+<body>
+
+<div id="all">
+
+    
+    <div class="pageheader">
+        <div class="header">
+            <ul class="breadcrumb">
+                
+                    
+                <a href=https://www.iki.fi/vesakaar>Return to homepage</a>
+            </ul>
+            
+        </div>
+
+        
+    </div> <!-- .pageheader -->
+
+    
+
+    <div id="content">
+        
+            <h1 id="course">Quasi-Monte Carlo methods for PDE uncertainty quantification</h1>
+
+This minicourse is organized as part of the <a href="Winter_School_Poster.pdf" target="_blank">Winter School of SIAM/GAMM Student Chapter Berlin</a> (21-22 February 2024, Institute of Mathematics, Humboldt-Universit&auml;t zu Berlin).
+<!--<h2 id="news">News</h2>
+
+<ul>
+<li></li>
+</ul>-->
+
+<h2 id="dates">Dates</h2>
+Lectures:
+<p>
+<table>
+<col />
+<col />
+<thead>
+</thead>
+
+<tbody>
+<tr>
+    <td>Wed Feb 21 2024</td>
+    <td>09:30-12:30</td>
+	<td>Dr. Vesa Kaarnioja</td>
+</tr>
+<tr>
+    <td>Thu Feb 22 2024</td>
+    <td>13:30-16:30</td>
+	<td>Dr. Vesa Kaarnioja</td>
+</tr>
+
+</tbody>
+</table></p>
+
+Location:     seminar room 1.114 at
+    Rudower Chaussee 25, 12489 Berlin (HU Berlin Campus Adlershof).
+
+<p><i>Contact: <a href="mailto:vesa.kaarnioja@fu-berlin.de">&#x76;&#x65;&#x73;&#x61;&#x2E;&#x6B;&#97;&#97;&#x72;n&#105;&#x6F;&#106;&#97;&#64;&#102;&#117;&#x2D;&#x62;&#x65;&#x72;&#108;&#105;&#x6E;&#x2E;&#x64;e</a></i></p>
+
+<h2 id="generalinformation">General information</h2>
+
+<h3 id="description">Description</h3>
+
+<p>High-dimensional numerical integration plays a central role in the contemporary study of uncertainty quantification. The analysis of how uncertainties associated with material parameters or the measurement configuration propagate within mathematical models leads to challenging high-dimensional integration problems. Meanwhile, Bayesian inference can be used to express the solution to inverse problems in terms of a high-dimensional posterior distribution. Evaluating the mean or uncertainty of the posterior distribution involves the computation of high-dimensional integrals.</p>
+
+    <p>Modern quasi-Monte Carlo (QMC) methods are based on tailoring specially designed cubature rules for high-dimensional integration problems. By leveraging the smoothness and anisotropy of an integrand, it is possible to achieve faster-than-Monte Carlo convergence rates. QMC methods have become a popular tool for solving partial differential equations (PDEs) involving random coefficients, a central topic within the field of uncertainty quantification.</p>
+    
+   <p>This course provides a brief introduction to forward and inverse uncertainty quantification for elliptic PDE problems using QMC methods.</p>
+
+
+<h2 id="lecturenotes">Lecture notes</h2>
+<ul>
+    <li><a href=qmc4pdeuq_v2.pdf>Lecture notes</a> (updated 22.2.)</li>
+    <li>Programs: <a href=fastcbc.m>fastcbc.m</a>, <a href=generator.m>generator.m</a>, <a href=affine_example.m>affine_example.m</a>, <a href=lognormal_example.m>lognormal_example.m</a></li>
+</ul>
+<br /><br /><br />
+<!--
+<ul>
+<li>Week 1: <a href="InverseProblems_Dokumente/week1.pdf">Introduction, Fredholm equation and its solvability, truncated SVD</a> (files: <a href="https://www.dropbox.com/s/ewntx9v9yo2m3ps/week1.mp4?dl=1">recording</a>)</li>
+<li>Week 2: <a href="InverseProblems_Dokumente/week2.pdf">Morozov discrepancy principle, Tikhonov regularization, and backward heat equation</a> (files: <a href="InverseProblems_Dokumente/week2.m">week2.m</a>)</li>
+<li>Week 3: <a href="InverseProblems_Dokumente/week3.pdf">Introduction to X-ray tomography, Landweber-Fridman iteration</a> (files: <a href="InverseProblems_Dokumente/tomodemo.m">tomodemo.m</a>)</li>
+<li>Week 4: <a href="InverseProblems_Dokumente/week4.pdf">Conjugate gradient method</a> (files: <a href="InverseProblems_Dokumente/cgdemo.m">cgdemo.m</a>)</li>
+<li>Week 5: <a href="InverseProblems_Dokumente/week5.pdf">Brief introduction to probability theory and Bayes' formula for inverse problems</a> (files: <a href="InverseProblems_Dokumente/week5.m">week5.m</a>)</li>
+<li>Week 6: <a href="InverseProblems_Dokumente/week6.pdf">Deconvolution example, Bayesian estimators, and well-posedness of Bayesian inverse problems</a> (files: <a href="InverseProblems_Dokumente/week6.m">week6.m</a>)</li>
+<li>Week 7: <a href="InverseProblems_Dokumente/week7.pdf">Sampling from Gaussian distributions, inverse transform sampling, prior modeling, and the linear Gaussian setting</a> (files: <a href="InverseProblems_Dokumente/priormodeling.m">priormodeling.m</a>, <a href="InverseProblems_Dokumente/week7.m">week7.m</a>)</li>
+<li>Week 8: <a href="InverseProblems_Dokumente/week8.pdf">Small noise limit of the posterior distribution, Monte Carlo, and importance sampling</a></li>
+<li>Week 9: <a href="InverseProblems_Dokumente/week9.pdf">Markov Chain Monte Carlo</a> (files: <a href="InverseProblems_Dokumente/mh.m">mh.m</a>, <a href="InverseProblems_Dokumente/gibbs.m">gibbs.m</a>, <a href="InverseProblems_Dokumente/autocovariance.m">autocovariance.m</a>)</li>
+<li>Week 10: <a href="InverseProblems_Dokumente/week10.pdf">Optimization perspective and Gaussian approximation</a></li>
+<li>Week 11: <a href="InverseProblems_Dokumente/week11.pdf">Brief overview of Bayesian and Kalman filters</a> (files: <a href="InverseProblems_Dokumente/kfdemo.m">kfdemo.m</a>)</li>
+<li>Week 12: <a href="InverseProblems_Dokumente/week12.pdf">Total variation regularization for X-ray tomography</a> (files: <a href="https://www.dropbox.com/s/hb24zvtj9rc4ty8/week12.mp4?dl=1">recording</a>, <a href="InverseProblems_Dokumente/tvdemo.m">tvdemo.m</a>, <a href="InverseProblems_Dokumente/sinogram.mat">sinogram.mat</a>)</li>
+</ul>-->
+
+
+<table>
+<col />
+<col />
+<thead>
+</thead>
+
+</table>
+
+        
+    </div>
+
+    
+
+    <div id="footer" class="pagefooter">
+        <div id="pageinfo">
+
+            
+
+            
+
+            <div class="pagedate">
+                Last edited <span class="date">Thu Feb 22 2024</span>
+                <!-- Created <span class="date">Tue Oct 25 14:04:54 2022</span> -->
+            </div>
+
+        </div><!-- #pageinfo -->
+        
+        <!-- from AGNumPDE Wiki -->
+    </div><!-- .pagefooter #footer -->
+
+</div>
+
+</body>
+
+</html>
