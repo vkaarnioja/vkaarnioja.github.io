@@ -1,1 +1,1 @@
-My homepage has moved to https://www.iki.fi/vesakaar
+My homepage is still at https://www.iki.fi/vesakaar
