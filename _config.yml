@@ -1,5 +1,3 @@
-theme: default
+theme: minima
 title: Research page of Dr. Vesa Kaarnioja
 description: Under construction
-github:
-  github.repository_url: .
