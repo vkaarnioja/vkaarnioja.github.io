@@ -1,3 +1,5 @@
-theme: jekyll-theme-so-simple
+theme: default
 title: Research page of Dr. Vesa Kaarnioja
 description: Under construction
+github:
+  site.github.repository_url: .
