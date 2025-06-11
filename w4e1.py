@@ -19,7 +19,7 @@ if __name__ == '__main__':
     rhs = mass[interior,:] @ f(nodes) # loading vector
     
     # Import the generating vector
-    z = np.loadtxt('https://vesak90.userpage.fu-berlin.de/offtheshelf.txt')
+    z = np.loadtxt('https://vkaarnioja.github.io/offtheshelf.txt')
 
     # Solve PDE over QMC point set
     def solve(i,n,ind):

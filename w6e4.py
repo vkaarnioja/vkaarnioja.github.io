@@ -84,7 +84,7 @@ if __name__ == '__main__':
     R = 16 # number of random shifts
     rms = [] # store the computed RMS errors (CBC results)
     rms2 = [] # store the computed RMS errors (off-the-shelf results)
-    z2 = np.loadtxt('https://vesak90.userpage.fu-berlin.de/offtheshelf.txt') # off-the-shelf generating vector
+    z2 = np.loadtxt('https://vkaarnioja.github.io/offtheshelf.txt') # off-the-shelf generating vector
     with Parallel(n_jobs=-1) as parallel:
         for i in range(len(nlist)):
             n = nlist[i]

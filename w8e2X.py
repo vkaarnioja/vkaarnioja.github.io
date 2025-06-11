@@ -11,7 +11,7 @@ if __name__ == '__main__':
     ones = np.ones(ndof)
     slist = 2**np.arange(1,12)
     n = 2**15
-    gen = np.loadtxt('https://vesak90.userpage.fu-berlin.de/offtheshelf2048.txt')
+    gen = np.loadtxt('https://vkaarnioja.github.io/offtheshelf2048.txt')
     results = []
     for s in slist:
         decay = 2.0

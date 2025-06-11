@@ -21,7 +21,7 @@ if __name__ == '__main__':
     f = lambda x: x[:,0]
     rhs = mass[interior,:] @ f(nodes)
 
-    gen = np.loadtxt('https://vesak90.userpage.fu-berlin.de/offtheshelf2048.txt')
+    gen = np.loadtxt('https://vkaarnioja.github.io/offtheshelf2048.txt')
     ones = np.ones(ndof)
     def solve(i,shift,n):
         qmcnode = norm.ppf(np.mod(i*z/n+shift,1))
